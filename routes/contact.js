@@ -13,8 +13,7 @@ const sendNotificationEmail = async (contact) => {
 };
 
 router.post('/',
-  // Validation
-  [
+ [
     body('name').trim().notEmpty().withMessage('Name is required'),
     body('email').isEmail().withMessage('Valid email is required'),
     body('message').trim().notEmpty().withMessage('Message cannot be empty'),
@@ -63,3 +62,4 @@ router.post('/',
 );
 
 module.exports = router;
+
